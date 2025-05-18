@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #121212;
+        color: #fff;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      h1 {
+        margin: 2rem 0 1rem;
+        font-size: 1.8rem;
+      }
+
+      video,
+      .youtube-container iframe {
+        width: 80%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        margin-bottom: 2rem;
+      }
+
+      .youtube-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .youtube-container iframe {
+        aspect-ratio: 16 / 9;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>A normal video file</h1>
+    <video controls autoplay muted loop>
+      <source src="./stuffs/sea_01.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h1>A YouTube Video</h1>
+    <div class="youtube-container">
+      <iframe
+        src="https://www.youtube.com/embed/k2DSi1zGEc8?autoplay=1&mute=1&loop=1&playlist=k2DSi1zGEc8"
+        title="YouTube video"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+  </body>
+</html>
