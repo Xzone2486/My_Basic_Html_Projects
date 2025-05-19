@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Set background image */
+        body {
+            background-image: url('./stuffs/travel_1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        /* Overlay for better readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1em;
+        }
+
+        input::placeholder {
+            color: #ccc;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Optional: remove the img tag from HTML since background is applied via CSS */
+        img {
+            display: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Personal Details</h1>
+    <form action="/submit">
+        <label for="name">Name</label>
+        <input type="name" id="name" name="name">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <label for=""></label>
+        <label for="dob">Date of birth</label>
+        <input type="date" id="dob" name="dob">
+        <label for="pno">Mobile Number</label>
+        <input type="tel" name="pno" id="pno">
+        <label for="gender">Select Gender : </label>
+        <select name="gender" id="gender">
+            <option value="" selected disabled>Select Option</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        
+    <h1>Travel Details</h1>
+    <label for="dcity">Departure City</label>
+    <input type="text" id="dcity" name="dcity" placeholder="City Name">
+    <label for="ddate">Departure Date</label>
+    <input type="date" id="ddate" name="ddate">
+    <label for="people">Number of travelers</label>
+    <input type="number" name="people" id="people">
+    </form>
+    <img src="./stuffs/travel_1.jpg" alt="">
+</body>
+</html>
