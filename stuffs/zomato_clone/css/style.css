@@ -1,0 +1,135 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('../img/bg.png') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #EF4F5F; /* Updated color */
+    z-index: 10;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ffcc99;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+main img {
+    display: none; /* Hide the secondary logo */
+}
+
+main p {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 4px #000;
+}
+
+/* Zomato logo */
+main::before {
+    content: "zomato";
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: white;
+}
+
+/* Search box container */
+.sc-hnjsbu {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    padding: 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Left location input with icon */
+.sc-eSePXt {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-right: 1px solid #ccc;
+}
+
+.sc-eSePXt input {
+    border: none;
+    outline: none;
+    color: #333;
+    width: 100px;
+}
+
+/* Search input */
+.sc-18n4g8v-0 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sc-18n4g8v-0 input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    text-align: center;
+    background: #EF4F5F; /* Updated color */
+    color: white;
+    font-size: 0.9rem;
+}
