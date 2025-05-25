@@ -10,12 +10,20 @@
 
 
   <body>
-    <head>
-      <img src="./stuffs/netflix_clone/logo.png" alt="logo" height="50px" />
-      <a class="signin" href="">Sign In</a>
-      <option class="lan" value="lang">English &#11206;</option>
-      
-    </head>
+<header>
+  <div class="header-left">
+    <img src="./stuffs/netflix_clone/logo.png" alt="Netflix Logo" />
+  </div>
+  <div class="header-right">
+    <select class="lan">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+    </select>
+    <a class="signin" href="#">Sign In</a>
+  </div>
+</header>
     <main>
       <div class="box1">
         <h1>Unlimited movies, TV shows and more</h1>
@@ -24,14 +32,14 @@
           Ready to watch? Enter your email to create or restart your membership.
         </h4>
         <div class="box2">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email address"
-          />
-          Get Started &gt;
-        </div>
+  <input
+    type="email"
+    name="email"
+    id="email"
+    placeholder="Email address"
+  />
+  <button class="get-started">Get Started &gt;</button>
+</div>
       </div>
     </main>
   </body>
