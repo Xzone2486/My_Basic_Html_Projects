@@ -1,0 +1,235 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    background-image: url(./bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    position: relative;
+    z-index: 0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+    z-index: -1;
+}
+
+/* ===== Header Layout ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/* Left logo, right controls */
+.header-left img {
+    height: 50px;
+}
+
+.header-right {
+    display: flex;
+    gap: 10px;
+}
+
+/* Language selector and Sign In button */
+.lan,
+.signin {
+    border: 1px solid;
+    border-radius: 4px;
+    height: 30px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.lan {
+    width: 100px;
+    border-color: gainsboro;
+    height: 34px;
+    color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='10'%20height='6'%20viewBox='0%200%2010%206'%3E%3Cpath%20fill='white'%20d='M0%200l5%206%205-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 10px;
+    padding-right: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.signin {
+    width: 70px;
+    height: auto;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+main {
+    text-align: center;
+}
+
+.box1 {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Container box */
+.box2 {
+  margin: 20px auto;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 14px;
+
+  display: flex;               /* key part: makes input & button side-by-side */
+  gap: 10px;                   /* space between input and button */
+  align-items: center;         /* vertically centers them */
+}
+
+/* Input field */
+.box2 input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  width: 200px;
+}
+
+/* Placeholder text */
+.box2 input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button styling */
+.get-started {
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional hover effect */
+.get-started:hover {
+  background-color: #b20710;
+}
+
+
+/* Section Styling */
+section {
+  color: white;
+  padding: 40px;
+  background-color: black;
+}
+
+/* Cards Layout */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background: linear-gradient(to bottom right, #2d0b56, #100028);
+  border-radius: 16px;
+  width: 240px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+}
+
+/* FAQ Section */
+.faq {
+  margin-top: 40px;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  padding: 15px 20px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  background-color: #222;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+/* Optional: Show answer on click */
+.faq-question.active + .faq-answer {
+  display: block;
+}
